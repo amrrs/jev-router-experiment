@@ -1,0 +1,159 @@
+{
+  "arms": {
+    "openai": {
+      "runs": 90,
+      "cost_usd": 0.3473774999999998,
+      "cost_upper_usd": 0.3473774999999998,
+      "unknown_billed_generations": 0,
+      "objective_passes": 69,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.9583333333333334,
+      "objective_ci95_task_bootstrap": [
+        0.875,
+        1.0
+      ],
+      "writing_mean_score": 0.9861111111111112,
+      "writing_full_passes": 17,
+      "writing_runs": 18,
+      "latency_median_s": 3.6287023330000006,
+      "latency_p95_s": 10.944694458999997,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 1,
+        "hard": 0.875
+      },
+      "by_category": {
+        "coding": 1,
+        "data": 0.8333333333333334,
+        "extraction": 1,
+        "reasoning": 1
+      },
+      "truncated": 0
+    },
+    "small": {
+      "runs": 90,
+      "cost_usd": 0.0024735000000000004,
+      "cost_upper_usd": 0.0024735000000000004,
+      "unknown_billed_generations": 0,
+      "objective_passes": 44,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.6111111111111112,
+      "objective_ci95_task_bootstrap": [
+        0.4305555555555555,
+        0.7916666666666666
+      ],
+      "writing_mean_score": 0.7777777777777778,
+      "writing_full_passes": 5,
+      "writing_runs": 18,
+      "latency_median_s": 1.2906388539999956,
+      "latency_p95_s": 4.792423458000002,
+      "by_difficulty": {
+        "easy": 0.75,
+        "medium": 0.625,
+        "hard": 0.4583333333333333
+      },
+      "by_category": {
+        "coding": 0.7222222222222222,
+        "data": 0.16666666666666666,
+        "extraction": 0.8888888888888888,
+        "reasoning": 0.6666666666666666
+      },
+      "truncated": 0
+    },
+    "large": {
+      "runs": 90,
+      "cost_usd": 0.004960799999999999,
+      "cost_upper_usd": 0.004960799999999999,
+      "unknown_billed_generations": 0,
+      "objective_passes": 60,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.8333333333333334,
+      "objective_ci95_task_bootstrap": [
+        0.6666666666666666,
+        0.9583333333333334
+      ],
+      "writing_mean_score": 0.9027777777777778,
+      "writing_full_passes": 11,
+      "writing_runs": 18,
+      "latency_median_s": 1.1225103540000134,
+      "latency_p95_s": 2.749255292000001,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 0.875,
+        "hard": 0.625
+      },
+      "by_category": {
+        "coding": 1,
+        "data": 0.5,
+        "extraction": 1,
+        "reasoning": 0.8333333333333334
+      },
+      "truncated": 0
+    },
+    "routed": {
+      "runs": 90,
+      "cost_usd": 0.004780086000000001,
+      "cost_upper_usd": 0.004780086000000001,
+      "unknown_billed_generations": 0,
+      "objective_passes": 48,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.6666666666666666,
+      "objective_ci95_task_bootstrap": [
+        0.4861111111111111,
+        0.8472222222222222
+      ],
+      "writing_mean_score": 0.8472222222222222,
+      "writing_full_passes": 8,
+      "writing_runs": 18,
+      "latency_median_s": 1.7419804999999986,
+      "latency_p95_s": 4.453523249999996,
+      "by_difficulty": {
+        "easy": 0.75,
+        "medium": 0.6666666666666666,
+        "hard": 0.5833333333333334
+      },
+      "by_category": {
+        "coding": 0.8888888888888888,
+        "data": 0.16666666666666666,
+        "extraction": 0.9444444444444444,
+        "reasoning": 0.6666666666666666
+      },
+      "truncated": 0
+    }
+  },
+  "budget_spend": {
+    "openai": 1.1796124999999997,
+    "nebius": 0.04644564,
+    "jev": 0.0019682460000000003
+  },
+  "total_api_calls": 497,
+  "api_errors": 3,
+  "writing_judge": "GPT-5.1 medium; one blinded judge; shared model with baseline; scores exploratory",
+  "cost_basis": "Provider-reported token usage x frozen public standard rates; Nebius conservatively no cache discount; excludes taxes",
+  "objective_task_count": 24,
+  "writing_task_count": 6,
+  "routed_vs_openai": {
+    "savings_percent": 98.6239506012911,
+    "conservative_savings_percent": 98.6239506012911,
+    "savings_bounds_percent": [
+      98.6239506012911,
+      98.6239506012911
+    ],
+    "objective_delta_pp": -29.166666666666668,
+    "objective_delta_ci95_pp": [
+      -47.22222222222222,
+      -12.5
+    ],
+    "noninferiority_margin_pp": -5,
+    "noninferiority_supported": false
+  },
+  "routing": {
+    "served_models": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507": 6,
+      "Qwen/Qwen3-30B-A3B-Instruct-2507": 84
+    },
+    "no_generation_response": 0,
+    "routing_cost_usd": 0.0018724860000000002,
+    "low_confidence_or_error_calls": 6
+  }
+}

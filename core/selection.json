@@ -1,0 +1,10 @@
+{
+  "selection_basis": "First broad Qwen discovery benchmark, before inspecting revised-model validation outcomes",
+  "discovery_routed_objective_success": {"extraction": 0.9444444444444444, "coding": 0.8888888888888888, "reasoning": 0.6666666666666666, "data": 0.16666666666666666},
+  "chosen_workload": "Source-grounded structured text: extraction, intent classification, fact lookup, and explicit policy decisions",
+  "excluded_workload": "Arithmetic aggregation, probability, constraint optimization, unconstrained writing, and code generation",
+  "new_task_count": 30,
+  "difficulty_mix": {"easy": 10, "medium": 10, "hard": 10},
+  "no_post_result_task_exclusions": true,
+  "caution": "Classification, lookup and policy are adjacent hypotheses to extraction, validated here rather than proven by the first discovery run. Router policy and generator portfolio were also revised during development; do not attribute all improvement to workload selection."
+}

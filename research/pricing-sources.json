@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-14",
+  "openai": {
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "model_source": "https://developers.openai.com/api/docs/models/gpt-5.1",
+    "model": "gpt-5.1-2025-11-13",
+    "standard_input_per_million_usd": 1.25,
+    "cached_input_per_million_usd": 0.125,
+    "output_per_million_usd": 10,
+    "reasoning_effort": "medium"
+  },
+  "nebius": {
+    "source": "https://tokenfactory.nebius.com/api/public/models_info",
+    "snapshot": "nebius-public-models.json",
+    "DeepSeek-V4-Flash-0731": {"input": 0.14, "output": 0.28},
+    "Kimi-K2.6": {"input": 0.95, "output": 4},
+    "Qwen3-30B-A3B-Instruct-2507": {"input": 0.1, "output": 0.3},
+    "Qwen3-235B-A22B-Instruct-2507": {"input": 0.2, "output": 0.6}
+  },
+  "jev": {
+    "source": "https://docs.typesafe.ai/models",
+    "model": "jev-1.13.0",
+    "input_per_million_usd": 0.042,
+    "output_per_million_usd": 0
+  },
+  "basis": "Standard public token rates. Includes reasoning tokens reported in completion usage. Nebius cache savings conservatively ignored. No taxes, credits, negotiated discounts, hosting, or manual rework included. Network failures retain maximum reserved charges."
+}

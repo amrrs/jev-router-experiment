@@ -1,0 +1,74 @@
+{
+  "models": {
+    "openai": "gpt-5.1-2025-11-13",
+    "small": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "large": "moonshotai/Kimi-K2.6"
+  },
+  "rates_usd_per_million": {
+    "openai": [
+      1.25,
+      10
+    ],
+    "small": [
+      0.14,
+      0.28
+    ],
+    "large": [
+      0.95,
+      4
+    ],
+    "jev": [
+      0.042,
+      0
+    ]
+  },
+  "caps": {
+    "openai": 10.0,
+    "nebius": 2.0,
+    "jev": 0.1
+  },
+  "routing_policy": {
+    "model": "jev-1.13.0",
+    "routing_rule": "large if algorithmic>=0.75 OR multistep>=0.90 OR route choice strong OR route confidence<0.50; else small",
+    "confidence_threshold": 0.5,
+    "fallback": "large",
+    "questions": {
+      "multistep": {
+        "type": "noul",
+        "instructions": "Does solving this request require combining multiple dependent reasoning steps, rather than straightforward extraction or rewriting?"
+      },
+      "algorithmic": {
+        "type": "noul",
+        "instructions": "Does this request require mathematical probability, combinatorial optimization, or designing a nontrivial algorithm?"
+      },
+      "route": {
+        "type": "choice",
+        "instructions": "Which generation model tier is sufficient to solve this request correctly? Prefer cheap for direct extraction, routine calculations, or simple writing. Choose strong for probability, constraint optimization, nontrivial algorithms or subtle conflicting evidence.",
+        "criteria": {
+          "cheap": "DeepSeek V4 Flash 0731, inexpensive capable open reasoning model ($0.14/$0.28 per million input/output). Sufficient for routine tasks.",
+          "strong": "Kimi K2.6, larger open reasoning model ($0.95/$4 per million input/output). Prefer for demanding reasoning, complex algorithms and subtle evidence."
+        }
+      }
+    }
+  },
+  "repeats": 3,
+  "system_prompt": "Follow the user request exactly. Give a concise final answer in valid JSON. Do not include markdown fences. Do not reveal chain of thought.",
+  "tasks_sha256": "0195413db5932d1dbd55e82aa00db8f5f3b53130c60d7a9f1c41bb45f263b21d",
+  "created_utc": "2026-10-14T12:42:01Z",
+  "primary_quality": "24 objective task pass rates; writing separate rubric scores",
+  "retry_policy": "No automatic retries; unknown-billed failures retain reservation",
+  "order": "Seeded shuffled arm/task/trial order; four concurrent HTTP workers",
+  "generation_config": {
+    "openai": {
+      "reasoning_effort": "medium",
+      "max_completion_tokens": 6000,
+      "service_tier": "default"
+    },
+    "nebius": {
+      "temperature": 0,
+      "max_tokens": 6000
+    }
+  },
+  "quality_margin_pp": -5,
+  "scoring": "30 structured-text tasks: exact JSON field names and gold-value equality; tolerance 1e-4 for numeric values. 10 easy,10 medium,10 hard. Domain chosen from original discovery extraction results, not validation results. No writing judge. Cluster bootstrap by task,5000 resamples. Five-point exploratory margin fixed before core execution. Three repeats and four arms. Revised policy from validation reused without adaptation."
+}

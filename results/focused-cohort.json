@@ -1,0 +1,32 @@
+{
+  "selection": "Post-hoc exploratory subset of completed core experiment; excludes all classification tasks, retains all extraction,source_lookup,policy tasks",
+  "tasks": 21,
+  "repeats": 3,
+  "arms": {
+    "openai": {
+      "attempts": 63,
+      "passed": 63,
+      "cost": 0.047518750000000005,
+      "upper": 0.047518750000000005
+    },
+    "small": {
+      "attempts": 63,
+      "passed": 63,
+      "cost": 0.0026276600000000013,
+      "upper": 0.0026276600000000013
+    },
+    "large": {
+      "attempts": 63,
+      "passed": 63,
+      "cost": 0.06597825000000002,
+      "upper": 0.06597825000000002
+    },
+    "routed": {
+      "attempts": 63,
+      "passed": 62,
+      "cost": 0.009821137999999993,
+      "upper": 0.012394561999999994
+    }
+  },
+  "conservative_savings_percent": 73.91648138892543
+}

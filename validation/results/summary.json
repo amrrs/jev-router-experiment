@@ -1,0 +1,159 @@
+{
+  "arms": {
+    "openai": {
+      "runs": 90,
+      "cost_usd": 0.40583125000000003,
+      "cost_upper_usd": 0.4717287500000001,
+      "unknown_billed_generations": 1,
+      "objective_passes": 66,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.9166666666666666,
+      "objective_ci95_task_bootstrap": [
+        0.8333333333333334,
+        0.9861111111111112
+      ],
+      "writing_mean_score": 0.9444444444444444,
+      "writing_full_passes": 17,
+      "writing_runs": 18,
+      "latency_median_s": 4.291661500000032,
+      "latency_p95_s": 28.611793791999986,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 0.8333333333333334,
+        "hard": 0.9166666666666666
+      },
+      "by_category": {
+        "coding": 0.8888888888888888,
+        "data": 0.9444444444444444,
+        "extraction": 1,
+        "reasoning": 0.8333333333333334
+      },
+      "truncated": 0
+    },
+    "small": {
+      "runs": 90,
+      "cost_usd": 0.011406500000000002,
+      "cost_upper_usd": 0.01374968,
+      "unknown_billed_generations": 1,
+      "objective_passes": 63,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.875,
+      "objective_ci95_task_bootstrap": [
+        0.7361111111111112,
+        0.9861111111111112
+      ],
+      "writing_mean_score": 0.8777777777777778,
+      "writing_full_passes": 12,
+      "writing_runs": 18,
+      "latency_median_s": 2.443531874499982,
+      "latency_p95_s": 11.475549999999998,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 0.875,
+        "hard": 0.75
+      },
+      "by_category": {
+        "coding": 0.5555555555555556,
+        "data": 0.9444444444444444,
+        "extraction": 1,
+        "reasoning": 1
+      },
+      "truncated": 1
+    },
+    "large": {
+      "runs": 90,
+      "cost_usd": 0.4957268,
+      "cost_upper_usd": 0.5242136500000001,
+      "unknown_billed_generations": 1,
+      "objective_passes": 63,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.875,
+      "objective_ci95_task_bootstrap": [
+        0.7638888888888888,
+        0.9722222222222222
+      ],
+      "writing_mean_score": 0.9444444444444444,
+      "writing_full_passes": 17,
+      "writing_runs": 18,
+      "latency_median_s": 3.9980961869999994,
+      "latency_p95_s": 24.03372587500001,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 0.875,
+        "hard": 0.75
+      },
+      "by_category": {
+        "coding": 0.7777777777777778,
+        "data": 0.9444444444444444,
+        "extraction": 0.8888888888888888,
+        "reasoning": 0.8888888888888888
+      },
+      "truncated": 6
+    },
+    "routed": {
+      "runs": 90,
+      "cost_usd": 0.3242213160000002,
+      "cost_upper_usd": 0.3265402760000002,
+      "unknown_billed_generations": 1,
+      "objective_passes": 65,
+      "objective_runs": 72,
+      "objective_pass_rate": 0.9027777777777778,
+      "objective_ci95_task_bootstrap": [
+        0.7777777777777778,
+        1.0
+      ],
+      "writing_mean_score": 0.8611111111111112,
+      "writing_full_passes": 11,
+      "writing_runs": 18,
+      "latency_median_s": 3.031221999500076,
+      "latency_p95_s": 23.402912501000003,
+      "by_difficulty": {
+        "easy": 0.9583333333333334,
+        "medium": 1,
+        "hard": 0.75
+      },
+      "by_category": {
+        "coding": 0.8333333333333334,
+        "data": 1,
+        "extraction": 1,
+        "reasoning": 0.7777777777777778
+      },
+      "truncated": 5
+    }
+  },
+  "budget_spend": {
+    "openai": 1.06979875,
+    "nebius": 0.8624830700000001,
+    "jev": 0.0020205360000000003
+  },
+  "total_api_calls": 468,
+  "api_errors": 5,
+  "writing_judge": "GPT-5.1 medium; one blinded judge; shared model with baseline; scores exploratory",
+  "cost_basis": "Provider-reported token usage x frozen public standard rates; Nebius conservatively no cache discount; excludes taxes",
+  "objective_task_count": 24,
+  "writing_task_count": 6,
+  "routed_vs_openai": {
+    "savings_percent": 20.109327214205365,
+    "conservative_savings_percent": 19.53791729937008,
+    "savings_bounds_percent": [
+      19.53791729937008,
+      31.269545051048908
+    ],
+    "objective_delta_pp": -1.388888888888889,
+    "objective_delta_ci95_pp": [
+      -15.277777777777777,
+      11.11111111111111
+    ],
+    "noninferiority_margin_pp": -5,
+    "noninferiority_supported": false
+  },
+  "routing": {
+    "served_models": {
+      "deepseek-ai/DeepSeek-V4-Flash-0731": 56,
+      "moonshotai/Kimi-K2.6": 33
+    },
+    "no_generation_response": 1,
+    "routing_cost_usd": 0.0020205360000000003,
+    "low_confidence_or_error_calls": 3
+  }
+}

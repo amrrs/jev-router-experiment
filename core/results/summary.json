@@ -1,0 +1,159 @@
+{
+  "arms": {
+    "openai": {
+      "runs": 90,
+      "cost_usd": 0.06517875000000002,
+      "cost_upper_usd": 0.131225,
+      "unknown_billed_generations": 1,
+      "objective_passes": 87,
+      "objective_runs": 90,
+      "objective_pass_rate": 0.9666666666666667,
+      "objective_ci95_task_bootstrap": [
+        0.9111111111111111,
+        1.0
+      ],
+      "writing_mean_score": null,
+      "writing_full_passes": 0,
+      "writing_runs": 0,
+      "latency_median_s": 1.8291141875000108,
+      "latency_p95_s": 3.1683065839999927,
+      "by_difficulty": {
+        "easy": 0.9333333333333333,
+        "medium": 1,
+        "hard": 0.9666666666666667
+      },
+      "by_category": {
+        "classification": 0.8888888888888888,
+        "extraction": 1,
+        "policy": 1,
+        "source_lookup": 1
+      },
+      "truncated": 0
+    },
+    "small": {
+      "runs": 90,
+      "cost_usd": 0.0038669400000000006,
+      "cost_upper_usd": 0.00621026,
+      "unknown_billed_generations": 1,
+      "objective_passes": 84,
+      "objective_runs": 90,
+      "objective_pass_rate": 0.9333333333333333,
+      "objective_ci95_task_bootstrap": [
+        0.8444444444444444,
+        1.0
+      ],
+      "writing_mean_score": null,
+      "writing_full_passes": 0,
+      "writing_runs": 0,
+      "latency_median_s": 1.6961991874999853,
+      "latency_p95_s": 3.053188083000002,
+      "by_difficulty": {
+        "easy": 0.9,
+        "medium": 0.9666666666666667,
+        "hard": 0.9333333333333333
+      },
+      "by_category": {
+        "classification": 0.7777777777777778,
+        "extraction": 1,
+        "policy": 1,
+        "source_lookup": 1
+      },
+      "truncated": 0
+    },
+    "large": {
+      "runs": 90,
+      "cost_usd": 0.08915909999999995,
+      "cost_upper_usd": 0.08915909999999995,
+      "unknown_billed_generations": 0,
+      "objective_passes": 90,
+      "objective_runs": 90,
+      "objective_pass_rate": 1,
+      "objective_ci95_task_bootstrap": [
+        1.0,
+        1.0
+      ],
+      "writing_mean_score": null,
+      "writing_full_passes": 0,
+      "writing_runs": 0,
+      "latency_median_s": 1.8560527084999947,
+      "latency_p95_s": 3.0217782909999755,
+      "by_difficulty": {
+        "easy": 1,
+        "medium": 1,
+        "hard": 1
+      },
+      "by_category": {
+        "classification": 1,
+        "extraction": 1,
+        "policy": 1,
+        "source_lookup": 1
+      },
+      "truncated": 0
+    },
+    "routed": {
+      "runs": 90,
+      "cost_usd": 0.011751597999999999,
+      "cost_upper_usd": 0.014325021999999993,
+      "unknown_billed_generations": 1,
+      "objective_passes": 83,
+      "objective_runs": 90,
+      "objective_pass_rate": 0.9222222222222223,
+      "objective_ci95_task_bootstrap": [
+        0.8222222222222222,
+        1.0
+      ],
+      "writing_mean_score": null,
+      "writing_full_passes": 0,
+      "writing_runs": 0,
+      "latency_median_s": 2.1738952919999974,
+      "latency_p95_s": 3.759201292,
+      "by_difficulty": {
+        "easy": 0.9,
+        "medium": 0.9666666666666667,
+        "hard": 0.9
+      },
+      "by_category": {
+        "classification": 0.7777777777777778,
+        "extraction": 0.9666666666666667,
+        "policy": 1,
+        "source_lookup": 1
+      },
+      "truncated": 0
+    }
+  },
+  "budget_spend": {
+    "openai": 0.131225,
+    "nebius": 0.10740807,
+    "jev": 0.0022863119999999987
+  },
+  "total_api_calls": 450,
+  "api_errors": 4,
+  "writing_judge": "GPT-5.1 medium; one blinded judge; shared model with baseline; scores exploratory",
+  "cost_basis": "Provider-reported token usage x frozen public standard rates; Nebius conservatively no cache discount; excludes taxes",
+  "objective_task_count": 30,
+  "writing_task_count": 0,
+  "routed_vs_openai": {
+    "savings_percent": 81.97020041040984,
+    "conservative_savings_percent": 78.02194426864585,
+    "savings_bounds_percent": [
+      78.02194426864585,
+      91.04469575157172
+    ],
+    "objective_delta_pp": -4.444444444444444,
+    "objective_delta_ci95_pp": [
+      -10.0,
+      0
+    ],
+    "noninferiority_margin_pp": -5,
+    "noninferiority_supported": false
+  },
+  "routing": {
+    "served_models": {
+      "deepseek-ai/DeepSeek-V4-Flash-0731": 86,
+      "moonshotai/Kimi-K2.6": 3
+    },
+    "no_generation_response": 1,
+    "routing_cost_usd": 0.002051447999999999,
+    "low_confidence_or_error_calls": 1
+  }
+}
